@@ -1,0 +1,55 @@
+.image-upload-section {
+  margin-bottom: 2rem;
+}
+
+.upload-box {
+  border: 2px dashed var(--border-color);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background: #fafafa;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.upload-box:hover {
+  border-color: var(--primary);
+  background: rgba(79, 70, 229, 0.05);
+}
+
+.upload-box p {
+  margin: 1rem 0 0.25rem 0;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.text-small {
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.text-light {
+  color: var(--text-light);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1.5rem;
+}
+
+.monetization-notice {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(243, 244, 246, 0.8);
+  border: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

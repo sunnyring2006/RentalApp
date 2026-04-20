@@ -1,0 +1,124 @@
+.admin-grid {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2rem;
+}
+
+.admin-sidebar {
+  padding: 1.5rem 0;
+  height: max-content;
+  position: sticky;
+  top: 100px;
+}
+
+.admin-nav {
+  list-style: none;
+}
+
+.admin-nav-item {
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: var(--transition);
+  border-left: 3px solid transparent;
+}
+
+.admin-nav-item:hover {
+  background: rgba(79, 70, 229, 0.05);
+  color: var(--primary);
+}
+
+.admin-nav-item.active {
+  background: rgba(79, 70, 229, 0.1);
+  color: var(--primary);
+  border-left-color: var(--primary);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.stat-card {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: rgba(79, 70, 229, 0.1);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Table styles */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.admin-table th {
+  font-weight: 600;
+  color: var(--text-light);
+  font-size: 0.875rem;
+  background: #fafafa;
+}
+
+.icon-btn {
+  padding: 0.25rem;
+  border-radius: var(--radius-md);
+  color: var(--text-light);
+}
+
+.icon-btn.approve:hover { color: var(--secondary); background: rgba(16, 185, 129, 0.1); }
+.icon-btn.reject:hover { color: var(--danger); background: rgba(239, 68, 68, 0.1); }
+
+@media (max-width: 1024px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+  .admin-sidebar {
+    position: static;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
